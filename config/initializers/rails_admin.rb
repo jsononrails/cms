@@ -44,8 +44,18 @@ RailsAdmin.config do |config|
     navigation_icon 'icon-folder-close'
     #navigation_label 'Content'
     
-    field :name
-    field :content, :ck_editor
+    field :name, :rich_picker do
+      config({
+        :allowed_styles => [:original],
+        :view_mode => "list"
+      })
+    end
+    
+    field :content, :rich_editor do
+      config({
+        :insert_many => true
+      })
+    end
     
     field :parent_id, :enum do
       enum_method do

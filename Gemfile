@@ -56,6 +56,7 @@ gem 'ancestry'
 
 # rich text editor
 gem 'rich'
+gem 'ckeditor'
 
 # file uploader
 gem 'carrierwave'

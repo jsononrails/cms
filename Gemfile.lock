@@ -38,6 +38,9 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    ckeditor (4.1.0)
+      mime-types
+      orm_adapter (~> 0.5.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.4)
@@ -199,6 +202,7 @@ DEPENDENCIES
   ancestry
   cancan
   carrierwave
+  ckeditor
   coffee-rails (~> 4.0.0)
   devise
   jbuilder (~> 2.0)
