@@ -53,12 +53,8 @@ gem 'rails_admin_nestable'
 
 # ancestry
 gem 'ancestry'
-
-# rich text editor
-gem 'rich'
 gem 'ckeditor'
-
-# file uploader
 gem 'carrierwave'
+gem 'mini_magick'
 
 
