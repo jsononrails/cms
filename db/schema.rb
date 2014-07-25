@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724194653) do
+ActiveRecord::Schema.define(version: 20140725004644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,12 @@ ActiveRecord::Schema.define(version: 20140724194653) do
   create_table "assignments", force: true do |t|
     t.integer  "user_id"
     t.integer  "role_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "banners", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -34,6 +40,10 @@ ActiveRecord::Schema.define(version: 20140724194653) do
     t.integer  "height"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "title"
+    t.string   "alttag"
+    t.string   "intro"
+    t.string   "description"
   end
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree

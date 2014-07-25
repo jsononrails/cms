@@ -39,10 +39,25 @@ RailsAdmin.config do |config|
     navigation_label 'Security'
   end
   
+  # banners
+  config.model Ckeditor::Banner do
+    list do
+      field :content do
+        hide
+      end
+      field :id
+      field :data
+      field :width
+      field :height
+      field :created_at
+      field :updated_at
+    end
+  end
+  
   # pages
   config.model 'Page' do
     navigation_icon 'icon-folder-close'
-    #navigation_label 'Content'
+    navigation_label 'Content'
     
     field :name
     field :content, :ck_editor 
@@ -59,6 +74,13 @@ RailsAdmin.config do |config|
       max_depth: 6
     })
     
+    list do
+      field :content do
+        hide
+      end
+      field :created_at
+      field :updated_at
+    end
   end
     
   config.actions do
