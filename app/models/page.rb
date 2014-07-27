@@ -4,7 +4,7 @@ class Page < ActiveRecord::Base
   # set auditing
   has_paper_trail
   
-  has_many :pagebanners
+  has_many :pagebanners, dependent: :destroy
   has_many :banners, through: :pagebanners
   
   def parent_enum

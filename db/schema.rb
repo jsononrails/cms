@@ -23,12 +23,6 @@ ActiveRecord::Schema.define(version: 20140726145757) do
     t.datetime "updated_at"
   end
 
-  create_table "banners", force: true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "ckeditor_assets", force: true do |t|
     t.string   "data_file_name",               null: false
     t.string   "data_content_type"
@@ -61,19 +55,6 @@ ActiveRecord::Schema.define(version: 20140726145757) do
     t.datetime "updated_at"
     t.string   "ancestry"
     t.integer  "position"
-  end
-
-  create_table "rich_rich_files", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "rich_file_file_name"
-    t.string   "rich_file_content_type"
-    t.integer  "rich_file_file_size"
-    t.datetime "rich_file_updated_at"
-    t.string   "owner_type"
-    t.integer  "owner_id"
-    t.text     "uri_cache"
-    t.string   "simplified_type",        default: "file"
   end
 
   create_table "roles", force: true do |t|

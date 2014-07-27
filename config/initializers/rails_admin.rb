@@ -61,6 +61,7 @@ RailsAdmin.config do |config|
     
     field :name
     field :content, :ck_editor 
+    field :banners
     
     field :parent_id, :enum do
       enum_method do
