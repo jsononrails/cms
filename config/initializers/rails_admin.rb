@@ -45,10 +45,15 @@ RailsAdmin.config do |config|
       field :content do
         hide
       end
-      field :id
-      field :data
-      field :width
-      field :height
+      field :id do
+        hide
+      end
+      field :data do
+        label "Banner"
+      end
+      field :title
+      #field :width
+      #field :height
       field :created_at
       field :updated_at
     end
