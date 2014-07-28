@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  
+  root to: 'pages#index'
+  resources :pages, only: [:index, :new, :create]
+  resources :pages, path: "", except: [:index, :new, :create]
+  get '*id', to: 'pages#show'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

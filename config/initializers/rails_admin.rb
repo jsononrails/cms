@@ -81,12 +81,19 @@ RailsAdmin.config do |config|
     })
     
     list do
+      field :banners do
+        hide
+        # figure out how to do count
+      end
+      
       field :content do
         hide
       end
+      
       field :created_at
       field :updated_at
     end
+    
   end
     
   config.actions do

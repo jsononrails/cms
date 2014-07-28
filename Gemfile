@@ -56,6 +56,6 @@ gem 'ancestry'
 gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
-gem 'zurb-foundation'
+gem 'foundation-rails'
 
 
