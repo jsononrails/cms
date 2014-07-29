@@ -13,8 +13,20 @@
 
   <body>
 	<div class="row">
-	  <div class="large-12 columns"><h1>Banner</h1></div>
+		<div class="large-12 columns orange-rule">
+		</div>	
+		<div class="large-12 columns banners">
+			<% if @page.banners %>
+			  <% @page.banners.each do |banner| %>
+			    <%= image_tag(banner.url_content) %>
+			  <% end %>
+			<% end %>
+			<div class="content large-offset-1 large-4 columns">
+				banner text here
+			</div>
+		</div>
 	</div>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

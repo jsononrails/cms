@@ -15,3 +15,26 @@
  *= require foundation_and_overrides
 
  */
+
+.banners {
+	padding:0;
+}
+.banners img {
+	width: 100%;
+}
+img, object, embed {
+    max-width: 100%;
+}
+
+.content {
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.85);
+	bottom: 22px;
+	padding: 20px;
+	position: absolute;
+}
+
+.orange-rule {
+	background: #d4722f;
+	display:block;
+	height: 8px;
+}
