@@ -38,3 +38,7 @@ img, object, embed {
 	display:block;
 	height: 8px;
 }
+
+/* Top Nav */
+.custom-nav-bar { background: #fff; }
+.title-logo { padding-top: 10px; }
