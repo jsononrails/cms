@@ -1,4 +1,7 @@
 <% content_for :title do %>
  | <%= @page.name %>
 <% end %>
-<h2><%= @page.name %></h2>
+
+<% content_for :content do %>
+  <%= raw @page.content %>
+<% end %>

@@ -65,6 +65,9 @@ RailsAdmin.config do |config|
     navigation_label 'Content'
     
     field :name
+    field :is_published
+    field :show_in_menu
+    field :intro
     field :content, :ck_editor 
     field :banners
     

@@ -43,3 +43,20 @@ img, object, embed {
 .custom-nav-bar { background: #fff; }
 .title-logo { padding-top: 10px; }
 
+/* Content */
+.main-content {
+	margin:0;
+	padding:0;
+}
+
+.main-content h1 {
+	text-align: center;
+}
+
+.main-content p {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	color: #193565;
+	line-height: 1.5em;
+}

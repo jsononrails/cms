@@ -16,7 +16,7 @@
 	<!-- Top Nav -->
 	<div class="fixed contain-to-grid custom-nav-bar">
 		<nav class="top-bar" data-topbar> 
-			<ul class="title-area large-offset-1 large-4 columns"> 
+			<ul class="title-area large-offset-1 large-6 columns"> 
 				<li class=""> <%= image_tag "logo_Small.png", class: "title-logo" %> </li> 
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --> 
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> 
@@ -24,11 +24,14 @@
 		
 			<section class="top-bar-section"> 
 			<!-- Right Nav Section --> 
-			<ul class="right"> 
-				<li class="active"><a href="#">About Us</a></li> 
-				<li class=""><a href="#">Services</a></li> 
-				<li class=""><a href="#">Team</a></li> 
-				<li class=""><a href="#">Contact</a></li> 
+			<ul class="left"> 
+				<% if @home_children %>
+					<% @home_children.each do |nav_item| %>
+						<% if nav_item.is_published && nav_item.show_in_menu %>
+							<li class="<%= nav_item.name == @page.name ? 'active' : '' %>"><%= link_to nav_item.name, nav_item.slug %></li> 
+						<% end %>
+					<% end %>
+				<% end %>
 			</ul> 
 			</section> 
 		</nav>
@@ -50,7 +53,12 @@
 		</div>
 	</div>
 
-    <%= yield %>
+	<div class="row">
+		<div class="large-offset-1 large-7 columns main-content">
+			<%= content_for?(:content) ? yield(:content) : "" %>
+		</div>
+	</div>
+	
     <%= javascript_include_tag "application" %>
   </body>
 </html>

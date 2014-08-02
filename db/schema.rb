@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140728010822) do
+ActiveRecord::Schema.define(version: 20140802195619) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,10 @@ ActiveRecord::Schema.define(version: 20140728010822) do
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
 
+  create_table "layouts", force: true do |t|
+    t.string "layout"
+  end
+
   create_table "pagebanners", force: true do |t|
     t.integer "page_id"
     t.integer "banner_id"
@@ -56,6 +60,9 @@ ActiveRecord::Schema.define(version: 20140728010822) do
     t.string   "ancestry"
     t.integer  "position"
     t.string   "slug"
+    t.boolean  "is_published"
+    t.boolean  "show_in_menu"
+    t.string   "intro"
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", using: :btree
