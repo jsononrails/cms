@@ -5,6 +5,9 @@ class Page < ActiveRecord::Base
   # set auditing
   has_paper_trail
   
+  # layout
+  belongs_to :layout
+  
   # associate to banners
   has_many :pagebanners, dependent: :destroy
   has_many :banners, through: :pagebanners

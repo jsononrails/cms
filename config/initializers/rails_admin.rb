@@ -67,6 +67,7 @@ RailsAdmin.config do |config|
     field :name
     field :is_published
     field :show_in_menu
+    field :layout
     field :intro
     field :content, :ck_editor 
     field :banners
