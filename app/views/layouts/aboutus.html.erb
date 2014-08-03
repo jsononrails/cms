@@ -1,0 +1,8 @@
+<% content_for :content do %>
+<% @page.children.each do |section| %>
+	<%= section.name %>
+	<%= section.intro %>
+	<%= raw section.content %>
+<% end %>
+<% end %>
+<%= render template: "layouts/application" %>
