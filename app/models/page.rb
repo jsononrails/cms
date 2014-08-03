@@ -14,10 +14,23 @@ class Page < ActiveRecord::Base
   
   # validations
   validates :slug, uniqueness: true, presence: true
+  validates :layout, :layout_id, presence: true
+  validates :name, presence: true
+  
   before_validation :generate_slug
   
+  after_initialize do
+    if new_record?
+      self.layout = Layout.find_by_layout 'Application'
+    end
+  end
+    
   def parent_enum
     Page.where.not(id: id).map { |p| [ p.name, p.id ] }
+  end
+  
+  def layout_enum
+    Layout.where.not(id: id).map { |l| [ l.layout, l.id ] }
   end
   
   # set friendly url ability

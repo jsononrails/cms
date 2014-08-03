@@ -19,7 +19,7 @@ RailsAdmin.config do |config|
   ### More at https://github.com/sferik/rails_admin/wiki/Base-configuration
 
   # Ignore models
-  config.excluded_models = ["Assignment", ""]
+  config.excluded_models = ["Assignment", "Pagebanner", ""]
 
   # Custom admin Model configurations
   
@@ -39,8 +39,15 @@ RailsAdmin.config do |config|
     navigation_label 'Security'
   end
   
+  # assets
+  config.model Ckeditor::Asset do    
+    hide
+  end
+  
   # banners
   config.model Ckeditor::Banner do
+    navigation_label 'Files'
+    
     list do
       field :content do
         hide
@@ -57,6 +64,23 @@ RailsAdmin.config do |config|
       field :created_at
       field :updated_at
     end
+    
+  end
+  
+  # pictures
+  config.model Ckeditor::Picture do
+    navigation_label 'Files'
+  end
+  
+  # files
+  config.model Ckeditor::AttachmentFile do
+    navigation_label 'Files'
+    label 'Files'
+  end
+  
+  # layouts
+  config.model 'Layout' do
+    navigation_label 'Content'
   end
   
   # pages
@@ -67,7 +91,13 @@ RailsAdmin.config do |config|
     field :name
     field :is_published
     field :show_in_menu
-    field :layout
+    
+    field :layout_id, :enum do      
+      enum_method do
+        :layout_enum
+      end
+    end
+    
     field :intro
     field :content, :ck_editor 
     field :banners
