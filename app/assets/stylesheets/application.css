@@ -100,3 +100,13 @@ a.link-button {
 	float: right;
 	margin-bottom: 13px;
 }
+.call-to-action-logo {
+	position: absolute;
+	z-index: 9999;
+	margin-top: 192px;
+	padding-left: 35px;
+}
+
+@media only screen and (max-width: 40em) { 
+	.banners .content { display:none; }
+} 
