@@ -1,8 +1,10 @@
 <% content_for :content do %>
 <% @page.children.each do |section| %>
-	<%= section.name %>
-	<%= section.intro %>
-	<%= raw section.content %>
+	<div class="about-us-section">
+		<div class="about-us-seciton-title-rule large-12 columns "></div>
+		<div class="about-us-section-title"><%= section.name %></div>
+		<%= raw section.content %>
+	</div>
 <% end %>
 <% end %>
 <%= render template: "layouts/application" %>

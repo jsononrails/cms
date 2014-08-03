@@ -45,8 +45,9 @@ img, object, embed {
 
 /* Content */
 .main-content {
-	margin:0;
-	padding:0;
+	/*margin:0;
+	padding:0;*/
+	padding-top:40px;
 }
 
 .main-content h1 {
@@ -54,9 +55,48 @@ img, object, embed {
 }
 
 .main-content p {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
+	/*margin: 0;
+	padding: 0;*/
+	font-size: 0.75em;
 	color: #193565;
 	line-height: 1.5em;
+}
+
+/* About Us Sections */
+.about-us-section {
+	overflow:hidden;
+	position: relative;
+	border-bottom: 1px solid #dbdce0;
+}
+.about-us-section-title {
+	width: 175px;
+	margin-left:auto;
+	margin-right: auto;
+	font-weight: bold;
+	color: white;
+	text-transform: uppercase;
+	background: #048166;
+	font-size: 0.75em;
+	padding: 12px;
+	margin-bottom: 20px;
+	position:relative;
+	z-index: 9999;
+}
+.about-us-seciton-title-rule {
+	z-index: 1;
+	height: 2px;
+	background: #048166;
+	position:absolute;
+	top: 15px;
+}
+a.link-button {
+	display: block;
+	background: #ebecee;
+	color: #048166;
+	padding: 9px;
+	border: 1px solid #048166;
+	font-weight: bold;
+	width: 128px;
+	float: right;
+	margin-bottom: 13px;
 }
