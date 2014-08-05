@@ -44,6 +44,15 @@ img, object, embed {
 .custom-nav-bar { background: #fff; }
 .title-logo { padding-top: 10px; }
 
+ul.menu-items {
+	padding-top: 0px;
+	margin-top: 50px;
+}
+
+ul.menu-items li, ul.menu-items li a {
+	line-height: normal !important;
+}
+
 /* Content */
 .main-content {
 	margin:0;
@@ -128,5 +137,15 @@ a.link-button {
 	.main-content {
 		margin:0;
 		padding:15px;
+	}
+	
+	ul.menu-items {
+		padding-top: 0px;
+		margin-top: 50px;
+	}
+
+	ul.menu-items li, ul.menu-items li a {
+		line-height: normal !important;
+		padding:0 !important;margin:0 !important;
 	}
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
