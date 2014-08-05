@@ -16,4 +16,17 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function() { 
+	$(document).foundation(); 
+	/* init banners */
+	$('.banners').slick({
+	  	  dots: true,
+		  infinite: true,
+		  speed: 1000,
+		  slidesToShow: 1,
+		  touchMove: true,
+		  autoplay: true,
+		  autoplaySpeed: 10000,
+	});
+	
+});

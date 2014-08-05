@@ -22,6 +22,7 @@
 .banners img {
 	width: 100%;
 }
+
 img, object, embed {
     max-width: 100%;
 }
