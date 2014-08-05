@@ -108,6 +108,9 @@ a.link-button {
 	padding-left: 35px;
 }
 
+.hide {
+	display:none;
+}
 /* mobile */
 @media only screen and (max-width: 40em) { 
 	.banners .content { display:none; }
