@@ -141,11 +141,10 @@ a.link-button {
 	
 	ul.menu-items {
 		padding-top: 0px;
-		margin-top: 50px;
+		margin-top: -10px;
 	}
 
 	ul.menu-items li, ul.menu-items li a {
 		line-height: normal !important;
-		padding:0 !important;margin:0 !important;
 	}
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
