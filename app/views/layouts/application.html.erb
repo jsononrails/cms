@@ -20,7 +20,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	<!-- Top Nav -->
 	<div class="contain-to-grid custom-nav-bar">
 		<nav class="top-bar" data-topbar> 
-			<ul class="title-area small-offset-1 small-6 columns"> 
+			<ul class="title-area large-offset-1 large-6 columns"> 
 				<li class=""> <%= image_tag "logo_Small.png", class: "title-logo" %> </li> 
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --> 
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> 
@@ -43,21 +43,21 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	<!-- End Top Nav -->
 	
 	<div class="row">	
-		<div class="small-offset-9 small-3 columns call-to-action-logo show-for-large-up">
+		<div class="large-offset-9 large-3 columns call-to-action-logo show-for-large-up">
 			<%= image_tag "scroll_logo.png" %>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="small-12 columns orange-rule"></div>	
+		<div class="large-12 columns orange-rule"></div>	
 	</div>
 	<div class="row">
-		<div class="small-12 columns banners">
+		<div class="large-12 columns banners">
 			<% if @page.banners %>
 			  <% @page.banners.each do |banner| %>
 			    <div class="hide">
 					<%= image_tag(banner.url_content) %>
-					<div class="content small-offset-1 small-4 columns">
+					<div class="content large-offset-1 large-4 columns">
 						banner text here
 					</div>
 				</div>
@@ -67,7 +67,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	</div>
 
 	<div class="row">
-		<div class="small-offset-1 small-7 columns main-content">
+		<div class="large-offset-1 large-7 columns main-content">
 			<%= content_for?(:content) ? yield(:content) : yield %>
 		</div>
 	</div>
