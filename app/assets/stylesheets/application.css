@@ -30,6 +30,7 @@ img, object, embed {
 .content {
 	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.85);
 	bottom: 22px;
+	left: 15px;
 	padding: 20px;
 	position: absolute;
 }
@@ -55,8 +56,8 @@ ul.menu-items li, ul.menu-items li a {
 
 /* Content */
 .main-content {
-	margin:0;
-	padding:0;
+	/*margin:0;
+	padding:0;*/
 	padding-top:40px;
 }
 
@@ -77,6 +78,7 @@ ul.menu-items li, ul.menu-items li a {
 	overflow:hidden;
 	position: relative;
 	border-bottom: 1px solid #dbdce0;
+	margin-bottom: 37px;
 }
 .about-us-section-title {
 	width: 175px;
@@ -111,10 +113,13 @@ a.link-button {
 	margin-bottom: 13px;
 }
 .call-to-action-logo {
-	position: absolute;
+	/*position: fixed;
 	z-index: 9999;
-	margin-top: 192px;
-	padding-left: 35px;
+	margin-top: 192px;*/
+	position: fixed;
+	top:280px;
+	right:73px;
+	z-index: 9999;
 }
 
 .hide {

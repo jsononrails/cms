@@ -17,7 +17,10 @@
 //= require_tree .
 
 $(function() { 
+	
+	// init zurb foundation
 	$(document).foundation(); 
+
 	/* init banners */
 	$('.banners').slick({
 	  	  dots: true,
