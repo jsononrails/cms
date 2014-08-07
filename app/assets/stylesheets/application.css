@@ -55,6 +55,10 @@ ul.menu-items li, ul.menu-items li a {
 }
 
 /* Content */
+.main-wrapper {
+	background: #f3f3f4;
+}
+
 .main-content {
 	/*margin:0;
 	padding:0;*/
@@ -74,6 +78,7 @@ ul.menu-items li, ul.menu-items li a {
 }
 
 /* About Us Sections */
+
 .about-us-section {
 	overflow:hidden;
 	position: relative;
@@ -101,6 +106,11 @@ ul.menu-items li, ul.menu-items li a {
 	position:absolute;
 	top: 15px;
 }
+
+.about-us-section.odd .about-us-section-title, .about-us-section.odd .about-us-seciton-title-rule {
+	background: #19487a
+}
+
 a.link-button {
 	display: block;
 	background: #ebecee;

@@ -8,6 +8,9 @@ class Page < ActiveRecord::Base
   # layout
   belongs_to :layout
   
+  # picture association
+  belongs_to :picture, class_name: Ckeditor::Picture
+  
   # associate to banners
   has_many :pagebanners, dependent: :destroy
   has_many :banners, through: :pagebanners

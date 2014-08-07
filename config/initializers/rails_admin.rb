@@ -99,6 +99,12 @@ RailsAdmin.config do |config|
     end
     
     field :intro
+    field :picture do
+      pretty_value do
+        value.select_title
+      end
+    end
+
     field :content, :ck_editor 
     field :banners
     
@@ -121,6 +127,10 @@ RailsAdmin.config do |config|
       end
       
       field :content do
+        hide
+      end
+      
+      field :picture do
         hide
       end
       

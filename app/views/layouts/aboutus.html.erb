@@ -1,6 +1,6 @@
 <% content_for :content do %>
 <% @page.children.each do |section| %>
-	<div class="about-us-section">
+	<div class="about-us-section <%= cycle('even', 'odd') %>">
 		<div class="about-us-seciton-title-rule small-12 columns "></div>
 		<div class="about-us-section-title"><%= section.name %></div>
 		<%= raw section.content %>
