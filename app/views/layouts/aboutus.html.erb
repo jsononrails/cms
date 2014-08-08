@@ -1,10 +1,23 @@
 <% content_for :content do %>
+
 <% @page.children.each do |section| %>
+	
 	<div class="about-us-section <%= cycle('even', 'odd') %>">
-		<div class="about-us-seciton-title-rule small-12 columns "></div>
-		<div class="about-us-section-title"><%= section.name %></div>
+		
+		<% if section.picture %>
+			<div class="row about-us-section-picture show-for-large-up">
+		 	  <%= image_tag(section.picture.url_content, class: "small-12 columns") %>
+			</div>
+		<% end %>
+		<div class="row about-us-seciton-title-container">		
+			<div class="about-us-seciton-title-rule small-12 columns "></div>
+			<div class="about-us-section-title"><%= section.name %></div>
+		</div>
 		<%= raw section.content %>
 	</div>
+
 <% end %>
+
 <% end %>
+
 <%= render template: "layouts/application" %>

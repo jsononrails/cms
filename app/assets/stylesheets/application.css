@@ -85,6 +85,11 @@ ul.menu-items li, ul.menu-items li a {
 	border-bottom: 1px solid #dbdce0;
 	margin-bottom: 37px;
 }
+
+.about-us-section:last-child {
+	border-bottom: none;
+}
+
 .about-us-section-title {
 	width: 175px;
 	margin-left:auto;
@@ -107,8 +112,16 @@ ul.menu-items li, ul.menu-items li a {
 	top: 15px;
 }
 
+.about-us-seciton-title-container {
+	position: relative;
+}
+
 .about-us-section.odd .about-us-section-title, .about-us-section.odd .about-us-seciton-title-rule {
 	background: #19487a
+}
+
+.about-us-section-picture {
+	padding-bottom: 23px;
 }
 
 a.link-button {
@@ -132,9 +145,14 @@ a.link-button {
 	z-index: 9999;
 }
 
+/* footer */
+
+/* misc */
 .hide {
 	display:none;
 }
+
+
 /* mobile */
 @media only screen and (max-width: 40em) { 
 	.banners .content { display:none; }
