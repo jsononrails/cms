@@ -9,6 +9,8 @@ class PagesController < ApplicationController
     @home_children ||= @home.children
     @page ||= Page.find_by_slug('about-us')
     @layout ||= @page.layout ? "layouts/#{@page.layout.layout}".downcase : "layouts/application"
+    @footer_about ||= Page.where("name = ? AND is_published = ?", "About Sault Sports Medicine", true).take
+    @footer_contact_info ||= Page.where("name = ? AND is_published = ?", "Contact Information", true).take
     render :show
   end
   
@@ -18,6 +20,8 @@ class PagesController < ApplicationController
       @home_children ||= @home.children
       @page ||= Page.find_by_slug(params[:id])
       @layout ||= @page.layout ? "layouts/#{@page.layout.layout}".downcase : "layouts/application"
+      @footer_about ||= Page.where("name = ? AND is_published = ?", "About Sault Sports Medicine", true).take
+      @footer_contact_info ||= Page.where("name = ? AND is_published = ?", "Contact Information", true).take
     end
     helper_method :page
 end

@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-  config.main_app_name = Proc.new { |controller| [ "Sault Sports Medicine", "Content Management System - #{controller.params[:action].try(:titleize)}" ] }
+  config.main_app_name = Proc.new { |controller| [ "Sault Sports Medicine", "Content Management System" ] }
   
   ## == Devise ==
   config.authenticate_with do

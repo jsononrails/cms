@@ -21,7 +21,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	<div class="contain-to-grid custom-nav-bar">
 		<nav class="top-bar" data-topbar> 
 			<ul class="title-area large-offset-1 large-6 columns"> 
-				<li class=""> <%= image_tag "logo_Small.png", class: "title-logo" %> </li> 
+				<li class=""> <a href="/"><%= image_tag "logo_Small.png", class: "title-logo" %> </a></li> 
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --> 
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> 
 			</ul> 
@@ -53,7 +53,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	</div>
 	<div class="row show-for-medium-up">
 		<div class="large-12 columns banners">
-			<% if @page.banners %>
+			<% if @page && @page.banners %>
 			  <% @page.banners.each do |banner| %>
 			    <div class="hide">
 					<%= image_tag(banner.url_content) %>
@@ -76,6 +76,18 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.3.6/slick.min.js"></script>
 	<div class="row">
 		<div class="large-12 columns orange-rule"></div>	
+	</div>
+	<div class="row footer-wrapper">
+		<div class="large-offset-1 large-3 columns footer-section">
+			<% if @footer_about %>
+				<div class="footer-section-title">
+					<%= @footer_about.name %>
+				</div>
+				<div class="footer-section-content">
+					<%= raw @footer_about.content %>
+				</div>
+			<% end %>
+		</div>
 	</div>
   </body>
 </html>

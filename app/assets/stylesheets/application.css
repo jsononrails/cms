@@ -146,6 +146,26 @@ a.link-button {
 }
 
 /* footer */
+.footer-wrapper {
+	background: #35373f;
+	padding-top: 22px;
+}
+
+.footer-section-title {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #f3f3f4;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #44444f;
+}
+
+.footer-section-content, .footer-section-content p {
+	font-size: 12px;
+	font-weight: bold;
+	color: #b6b9c0;
+}
 
 /* misc */
 .hide {
