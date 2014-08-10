@@ -16,6 +16,10 @@
 
  */
 
+body {
+
+}
+
 /* banners */
 .banners {
 	padding:0;
@@ -25,15 +29,14 @@
 }
 
 .banner-intro {
-	font-size: 17px;
+	font-size: 1.063em;
 	font-weight: bold;
 	color: #c9611f;
 	padding-bottom: 6px;
 }
 
 .banner-description {
-	font-size: 12px;
-	font-weight: bold;
+	font-size: 0.75em;
 	color: #35373f;
 }
 
@@ -85,11 +88,7 @@ ul.menu-items li, ul.menu-items li a {
 }
 
 .main-content p, .main-content table td , .bullet-list ul li{
-	/*margin: 0;
-	padding: 0;*/
-	font-size: 0.75em;
 	color: #193565;
-	line-height: 1.5em;
 }
 
 /* About Us Sections */
@@ -109,16 +108,16 @@ ul.menu-items li, ul.menu-items li a {
 	width: 175px;
 	margin-left:auto;
 	margin-right: auto;
-	font-weight: bold;
+	font-weight: normal;
 	color: white;
 	text-transform: uppercase;
 	background: #048166;
-	font-size: 0.75em;
 	padding: 12px;
 	margin-bottom: 20px;
 	position:relative;
 	z-index: 9999;
 	text-align:center;
+	font-size: 0.75em;
 }
 .about-us-seciton-title-rule {
 	z-index: 1;
@@ -168,8 +167,7 @@ a.link-button:hover {
 }
 
 .call-to-action-phone {
-	font-size: 13px;
-	font-weight: bold;
+	font-size: 0.813em;
 	color: #f3f3f4;
 	position: absolute;
 	top: 80px;
@@ -177,8 +175,7 @@ a.link-button:hover {
 }
 
 .call-to-action-text {
-	font-size: 11px;
-	font-weight: normal;
+	font-size: 0.688em;
 	position: absolute;
 	color: #f3f3f4;
 	top: 100px;
@@ -196,7 +193,7 @@ a.link-button:hover {
 }
 
 .footer-section-title {
-	font-size: 12px;
+	font-size: 0.75em;
 	text-transform: uppercase;
 	font-weight: bold;
 	color: #f3f3f4;
@@ -206,14 +203,12 @@ a.link-button:hover {
 }
 
 .footer-section-content, .footer-section-content p, .footer-menu a {
-	font-size: 12px;
-	font-weight: bold;
 	color: #b6b9c0;
 }
 
 .footer-contact-section {
 	overflow:hidden;
-	padding-bottom: 15px;
+	padding-bottom: 0px;
 }
 
 .footer-contact-image, .footer-contact-text {
@@ -222,10 +217,6 @@ a.link-button:hover {
 
 .footer-contact-text {
 	line-height: 1em;
-}
-
-.footer-contact-text p i {
-	font-weight:normal;
 }
 
 .footer-contact-image {
@@ -244,7 +235,7 @@ a.link-button:hover {
 	list-style-type: none;
 	margin:0;
 	padding:0;
-	line-height: 1em;
+	line-height: 1.75em;
 }
 
 /* misc */
@@ -259,8 +250,11 @@ a.link-button:hover {
 
 .bullet-list ul {
 	float: left;
+	padding-left: 40px;
 	padding-right: 40px;
 }
+
+
 
 /* mobile */
 @media only screen and (max-width: 40em) { 
