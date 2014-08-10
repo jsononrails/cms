@@ -118,6 +118,7 @@ ul.menu-items li, ul.menu-items li a {
 	margin-bottom: 20px;
 	position:relative;
 	z-index: 9999;
+	text-align:center;
 }
 .about-us-seciton-title-rule {
 	z-index: 1;
@@ -223,12 +224,16 @@ a.link-button:hover {
 	line-height: 1em;
 }
 
+.footer-contact-text p i {
+	font-weight:normal;
+}
+
 .footer-contact-image {
 	padding-right: 6px;
 }
 
 .footer-contact-section:last-child .footer-contact-image {
-	padding-bottom:55px;
+	padding-bottom:95px;
 }
 
 .footer-menu a:hover {
