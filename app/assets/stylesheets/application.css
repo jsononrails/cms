@@ -151,6 +151,10 @@ a.link-button {
 	margin-bottom: 13px;
 }
 
+a.link-button:hover {
+	color: #c9611f;
+}
+
 /* blue logo */
 .call-to-action-logo {
 	/*position: fixed;
@@ -181,6 +185,10 @@ a.link-button {
 }
 
 /* footer */
+.footer-section {
+	overflow:hidden;
+}
+
 .footer-wrapper {
 	background: #35373f;
 	padding-top: 22px;
@@ -220,7 +228,7 @@ a.link-button {
 }
 
 .footer-contact-section:last-child .footer-contact-image {
-	padding-bottom:30px;
+	padding-bottom:55px;
 }
 
 .footer-menu a:hover {
@@ -270,5 +278,10 @@ a.link-button {
 
 	ul.menu-items li, ul.menu-items li a {
 		line-height: normal !important;
+	}
+	
+	.footer-contact-section {
+		float: left;
+		width: 40%;
 	}
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
