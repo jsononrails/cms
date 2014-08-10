@@ -6,7 +6,7 @@
 		
 		<% if section.picture %>
 			<div class="row about-us-section-picture show-for-large-up">
-		 	  <%= image_tag(section.picture.url_content, class: "small-12 columns") %>
+		 	  <%= image_tag(section.picture.url_content, class: "small-12 columns", alt: section.picture.alttag, title: section.picture.alttag) %>
 			</div>
 		<% end %>
 		<div class="row about-us-seciton-title-container">		

@@ -16,11 +16,25 @@
 
  */
 
+/* banners */
 .banners {
 	padding:0;
 }
 .banners img {
 	width: 100%;
+}
+
+.banner-intro {
+	font-size: 17px;
+	font-weight: bold;
+	color: #c9611f;
+	padding-bottom: 6px;
+}
+
+.banner-description {
+	font-size: 12px;
+	font-weight: bold;
+	color: #35373f;
 }
 
 img, object, embed {
