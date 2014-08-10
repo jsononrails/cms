@@ -284,4 +284,7 @@ a.link-button:hover {
 		float: left;
 		width: 40%;
 	}
+	
+	.content { width: 275px; bottom:0; padding: 5px; left:0;}
+	.banner-intro { padding-bottom: 0; padding-left:12px;}
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
