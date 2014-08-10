@@ -63,10 +63,12 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 			  <% @page.banners.each do |banner| %>
 			    <div class="hide">
 					<%= image_tag(banner.url_content, alt: banner.alttag, title: banner.alttag) %>
+					<% if banner.intro != "" %>
 					<div class="content large-offset-1 large-4 columns">
 						<div class="banner-intro"><%= banner.intro %></div>
 						<div class="banner-description show-for-large-up"><%= banner.description %></div>
 					</div>
+					<% end %>
 				</div>
 			  <% end %>
 			<% end %>			
@@ -75,7 +77,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 
 	<div class="row main-wrapper">
 		<div class="large-offset-1 large-7 columns main-content">
-			<%= content_for?(:content) ? yield(:content) : yield %>
+			<%= content_for?(:content) ? yield(:content) : "" %>
 		</div>
 	</div>
 	

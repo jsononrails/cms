@@ -84,7 +84,7 @@ ul.menu-items li, ul.menu-items li a {
 	text-align: center;
 }
 
-.main-content p {
+.main-content p, .main-content table td , .bullet-list ul li{
 	/*margin: 0;
 	padding: 0;*/
 	font-size: 0.75em;
@@ -245,6 +245,16 @@ a.link-button:hover {
 /* misc */
 .hide {
 	display:none;
+}
+
+.bullet-list {
+	overflow:hidden;
+	width: 100%;
+}
+
+.bullet-list ul {
+	float: left;
+	padding-right: 40px;
 }
 
 /* mobile */
