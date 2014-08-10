@@ -150,6 +150,8 @@ a.link-button {
 	float: right;
 	margin-bottom: 13px;
 }
+
+/* blue logo */
 .call-to-action-logo {
 	/*position: fixed;
 	z-index: 9999;
@@ -158,6 +160,24 @@ a.link-button {
 	top:280px;
 	right:73px;
 	z-index: 9999;
+}
+
+.call-to-action-phone {
+	font-size: 13px;
+	font-weight: bold;
+	color: #f3f3f4;
+	position: absolute;
+	top: 80px;
+	left: 55px;
+}
+
+.call-to-action-text {
+	font-size: 11px;
+	font-weight: normal;
+	position: absolute;
+	color: #f3f3f4;
+	top: 100px;
+	left:27px;
 }
 
 /* footer */
@@ -180,6 +200,27 @@ a.link-button {
 	font-size: 12px;
 	font-weight: bold;
 	color: #b6b9c0;
+}
+
+.footer-contact-section {
+	overflow:hidden;
+	padding-bottom: 15px;
+}
+
+.footer-contact-image, .footer-contact-text {
+	float: left;
+}
+
+.footer-contact-text {
+	line-height: 1em;
+}
+
+.footer-contact-image {
+	padding-right: 6px;
+}
+
+.footer-contact-section:last-child .footer-contact-image {
+	padding-bottom:30px;
 }
 
 .footer-menu a:hover {

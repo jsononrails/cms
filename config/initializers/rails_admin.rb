@@ -23,6 +23,12 @@ RailsAdmin.config do |config|
 
   # Custom admin Model configurations
   
+  # site
+  
+  config.model 'Site' do
+    navigation_label 'Site Information'
+  end
+  
   # use icon-user for menu
   
   config.model 'User' do

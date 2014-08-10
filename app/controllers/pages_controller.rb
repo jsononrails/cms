@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
   
   def index
+    @site ||= Site.find_by_name('Sault Sports Medicine')
     @home ||= Page.find_by_slug('home')
     @home_children ||= @home.children
     @page ||= Page.find_by_slug('about-us')
@@ -16,6 +17,7 @@ class PagesController < ApplicationController
   
   private
     def find_page
+      @site ||= Site.find_by_name('Sault Sports Medicine')
       @home ||= Page.find_by_slug('home')
       @home_children ||= @home.children
       @page ||= Page.find_by_slug(params[:id])
