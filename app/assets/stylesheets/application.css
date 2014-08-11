@@ -244,6 +244,11 @@ a.link-button:hover {
 	line-height: 1.75em;
 }
 
+.footer-menu li.active a {
+	color: #c9611f;
+	font-weight: bold;
+}
+
 /* misc */
 .hide {
 	display:none;
