@@ -119,7 +119,7 @@ ul.menu-items li, ul.menu-items li a {
 	text-align:center;
 	font-size: 0.75em;
 }
-.about-us-seciton-title-rule {
+.about-us-section-title-rule {
 	z-index: 1;
 	height: 2px;
 	background: #048166;
@@ -127,11 +127,11 @@ ul.menu-items li, ul.menu-items li a {
 	top: 15px;
 }
 
-.about-us-seciton-title-container {
+.about-us-section-title-container {
 	position: relative;
 }
 
-.about-us-section.odd .about-us-section-title, .about-us-section.odd .about-us-seciton-title-rule {
+.about-us-section.odd .about-us-section-title, .about-us-section.odd .about-us-section-title-rule {
 	background: #19487a
 }
 
