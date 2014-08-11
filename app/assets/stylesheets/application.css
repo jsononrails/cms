@@ -23,6 +23,7 @@ body {
 /* banners */
 .banners {
 	padding:0;
+	overflow:hidden;
 }
 .banners img {
 	width: 100%;
