@@ -32,9 +32,14 @@ body {
 .banners {
 	padding:0;
 	overflow:hidden;
+	position: relative;
 }
 .banners img {
 	width: 100%;
+}
+
+.banner {
+	position: relative;
 }
 
 .banner-intro {
