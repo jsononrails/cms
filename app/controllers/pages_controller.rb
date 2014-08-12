@@ -7,8 +7,9 @@ class PagesController < ApplicationController
   def index
     @site ||= Site.find_by_name('Sault Sports Medicine')
     @home ||= Page.find_by_slug('home')
-    @home_children ||= @home.children
+    @home_children ||= @home.children.order("position ASC")
     @page ||= Page.find_by_slug('about-us')
+    @page_children ||= @page.children.order("position ASC")
     @layout ||= @page.layout ? "layouts/#{@page.layout.layout}".downcase : "layouts/application"
     @footer_about ||= Page.where("name = ? AND is_published = ?", "About Sault Sports Medicine", true).take
     @footer_contact_info ||= Page.where("name = ? AND is_published = ?", "Contact Information", true).take
@@ -19,8 +20,9 @@ class PagesController < ApplicationController
     def find_page
       @site ||= Site.find_by_name('Sault Sports Medicine')
       @home ||= Page.find_by_slug('home')
-      @home_children ||= @home.children
+      @home_children ||= @home.children.order("position ASC")
       @page ||= Page.find_by_slug(params[:id])
+      @page_children ||= @page.children.order("position ASC")
       @layout ||= @page.layout ? "layouts/#{@page.layout.layout}".downcase : "layouts/application"
       @footer_about ||= Page.where("name = ? AND is_published = ?", "About Sault Sports Medicine", true).take
       @footer_contact_info ||= Page.where("name = ? AND is_published = ?", "Contact Information", true).take
