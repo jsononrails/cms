@@ -17,7 +17,7 @@
  */
 
 body {
-
+	background: #dddedf;
 }
 
 /* google map */
@@ -68,7 +68,7 @@ img, object, embed {
 }
 
 /* Top Nav */
-.custom-nav-bar { background: #fff; }
+.custom-nav-bar { background: #dddedf; }
 .title-logo { padding-top: 10px; }
 
 ul.menu-items {

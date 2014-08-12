@@ -79,7 +79,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 
 	<div class="row main-wrapper">
 		<div class="large-offset-1 large-7 columns main-content">
-			<%= content_for?(:content) ? yield(:content) : "" %>
+			<%= content_for?(:content) ? yield(:content) : yield %>
 		</div>
 	</div>
 	
