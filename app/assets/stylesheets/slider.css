@@ -49,9 +49,9 @@
 .slick-dots li.slick-active button:before { color: black; opacity: 1; }
 
 .slick-dots li.slick-active button {
-	background: url('Slider_Nav_Active.png') no-repeat 0 0;
+	background: url('/assets/Slider_Nav_Active.png') no-repeat 0 0;
 }
 
 .slick-dots li button {
-	background: url('Slider_Nav.png') no-repeat 0 0;
+	background: url('/assets/Slider_Nav.png') no-repeat 0 0;
 }
