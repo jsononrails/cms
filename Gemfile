@@ -58,5 +58,5 @@ gem 'ckeditor'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'foundation-rails'
-
+gem 'rails_12factor', group: :production
 
