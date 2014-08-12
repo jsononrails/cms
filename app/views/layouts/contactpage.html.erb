@@ -1,0 +1,39 @@
+<% content_for :map do %>
+	<div id="map_canvas" class="large-3 columns banners"></div>	
+<% end %>
+
+<% content_for :content do %>
+	<div class="contact-us-section <%= cycle('even', 'odd') %>">
+		<div class="row contact-us-section-title-container">		
+			<div class="contact-us-section-title-rule large-12 columns "></div>
+			<div class="contact-us-section-title"><%= @page.name %></div>
+		</div>
+		<%= raw @page.content %>
+	</div>
+	
+	<div class="row">
+		<div class="footer-contact-section large-5 columns">
+			<div class="footer-contact-image contactpage">
+				<%= image_tag("home.png", alt: "Address", title: "Address") %>
+			</div> 
+			<div cass="footer-contact-text"><p>
+				Suite <%= @site.suite %> <br />
+				<%= @site.streetaddress %>, <%= @site.city %>, <%= @site.province %> <br />
+				<%= @site.postalcode %>
+				</p>
+				<p>
+				<i><%= @site.notes %></i></p>
+			</div>
+		</div>
+		<div class="footer-contact-section large-3 left columns">
+			<div class="footer-contact-image contactpage">
+				<%= image_tag("phone.png", alt: "Telephone", title: "Telephone") %>
+			</div> 
+			<div cass="footer-contact-text">
+				<p>Tel: <%= @site.phone %></p>
+			</div>
+		</div>
+	</div>
+<% end %>
+
+<%= render template: "layouts/application" %>

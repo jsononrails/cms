@@ -2,10 +2,6 @@
  | <%= @page.name %>
 <% end %>
 
-<% content_for :content do %>
-  <%= raw @page.content %>
-<% end %>
-
 <% if @layout %>
   <%= render template: @layout %>
 <% end %>

@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
 
   <body data-no-turbolink='true' data-grid-framework="f4" data-grid-color="blue" data-grid-opacity="0.5" data-grid-zindex="10" data-grid-gutterwidth="30px" data-grid-nbcols="16">
@@ -58,6 +59,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 		<div class="large-12 columns orange-rule"></div>	
 	</div>
 	<div class="row show-for-medium-up">
+		<%= content_for(:map) ? yield(:map) : "" %>	
 		<div class="large-12 columns banners">
 			<% if @page && @page.banners %>
 			  <% @page.banners.each do |banner| %>
@@ -72,7 +74,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 				</div>
 			  <% end %>
 			<% end %>			
-		</div>
+		</div>		
 	</div>
 
 	<div class="row main-wrapper">
