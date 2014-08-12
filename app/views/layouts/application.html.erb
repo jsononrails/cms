@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= @site.name %><%= content_for?(:title) ? yield(:title) : "" %></title>
+    <title><%= @site.name unless @site.nil? %><%= content_for?(:title) ? yield(:title) : "" %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
@@ -22,7 +22,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	<div class="contain-to-grid custom-nav-bar">
 		<nav class="top-bar" data-topbar> 
 			<ul class="title-area large-offset-1 large-6 columns"> 
-				<li class=""> <a href="/"><%= image_tag "logo_Small.png", class: "title-logo", alt: @site.name, title: @site.name %> </a></li> 
+				<li class=""> <a href="/"><%= image_tag "logo_Small.png", class: "title-logo", alt: (@site.name unless @site.nil?) , title: (@site.name unless @site.nil?) %> </a></li> 
 				<!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone --> 
 				<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li> 
 			</ul> 
@@ -47,7 +47,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 		<div class="large-offset-9 large-3 columns call-to-action-logo show-for-large-up">
 			<%= image_tag "scroll_logo.png" %>
 			<div class="call-to-action-phone">
-				<%= @site.phone %>
+				<%= @site.phone unless @site.nil? %>
 			</div>
 			<div class="call-to-action-text">
 				Call to make an appointment.
@@ -99,7 +99,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 			<% end %>
 		</div>
 		<div class="large-offset-1 large-3 columns footer-section">
-			<% if @footer_contact_info %>
+			<% if @footer_contact_info && @site != nil %>
 				<div class="footer-section-title">
 					<%= @footer_contact_info.name %>
 				</div>
