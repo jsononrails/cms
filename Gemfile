@@ -59,4 +59,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'foundation-rails'
 gem 'rails_12factor', group: :production
+gem 'heroku_rails_deflate', :group => :production
+
 
