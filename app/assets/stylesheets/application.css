@@ -86,6 +86,24 @@ ul.menu-items li, ul.menu-items li a {
 	line-height: normal !important;
 }
 
+ul.menu-items li {
+	position: relative;
+}
+
+ul.menu-items li span.divider {
+	display: inline-block;
+	width: 0;
+	height: 0.563em;
+	border-right: 2px solid #35373f;
+	position: absolute;
+	top: 3px;
+	right: 0;
+}
+
+ul.menu-items li:last-child span.divider {
+	display:none;
+}
+
 /* Content */
 .main-wrapper {
 	background: #f3f3f4;
@@ -302,6 +320,10 @@ a.link-button:hover {
 		padding-top: 10px;
 		margin-top: 0;
 	}
+	
+	ul.menu-items li span.divider {
+		display:none;
+	}
 } 
 
 /* tablet */
@@ -317,7 +339,9 @@ a.link-button:hover {
 		padding-top: 0px;
 		margin-top: -10px;
 	}
-
+	ul.left.menu-items {
+		float:right !important;
+	}
 	ul.menu-items li, ul.menu-items li a {
 		line-height: normal !important;
 	}
