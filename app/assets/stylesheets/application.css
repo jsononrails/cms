@@ -261,12 +261,20 @@ a.link-button:hover {
 	line-height: 1em;
 }
 
+.site-notes {
+	color:#C9611F;
+}
+
 .footer-contact-image {
 	padding-right: 6px;
 }
 
 .footer-contact-section:last-child .footer-contact-image, .footer-contact-image.contactpage {
 	padding-bottom:105px;
+}
+
+.footer-contact-image.contactpage {
+	padding-bottom: 120px;
 }
 
 .footer-menu a:hover {
