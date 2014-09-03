@@ -54,6 +54,19 @@ RailsAdmin.config do |config|
   config.model Ckeditor::Banner do
     navigation_label 'Files'
     
+    field :data do
+      label "Banner"
+    end
+    
+    field :title
+    field :alttag do
+      label "Alt Tag"
+    end
+    
+    field :intro
+    field :description
+    field :pages
+    
     list do
       field :content do
         hide
@@ -76,17 +89,84 @@ RailsAdmin.config do |config|
   # pictures
   config.model Ckeditor::Picture do
     navigation_label 'Files'
+    
+    field :data do
+      label "Picture"
+    end
+    
+    field :title
+    field :alttag do
+      label "Alt Tag"
+    end
+    
+    field :intro
+    field :description
+
+    
+    list do
+      field :content do
+        hide
+      end
+      field :id do
+        hide
+      end
+      field :data do
+        label "Picture"
+      end
+      field :title
+      #field :width
+      #field :height
+      field :created_at
+      field :updated_at
+    end
   end
   
   # files
   config.model Ckeditor::AttachmentFile do
     navigation_label 'Files'
     label 'Files'
+    
+    list do
+      field :content do
+        hide
+      end
+      field :id do
+        hide
+      end
+      field :data do
+        label "File"
+      end
+      field :title
+      #field :width
+      #field :height
+      field :created_at
+      field :updated_at
+    end
   end
   
   # layouts
   config.model 'Layout' do
     navigation_label 'Content'
+    
+    list do
+      field :layout
+    
+      field :content do
+        hide
+      end
+    end
+    
+    field :layout
+    
+    field :content do
+      hide
+    end
+    
+    #hide pages
+    configure :pages do
+      hide
+    end
+    
   end
   
   # pages
