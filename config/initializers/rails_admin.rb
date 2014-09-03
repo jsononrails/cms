@@ -175,6 +175,22 @@ RailsAdmin.config do |config|
     navigation_label 'Content'
     
     field :name
+    
+    field :parent_id, :enum do
+      label "Parent Page"
+      enum_method do
+        :parent_enum
+      end
+    end
+    
+    field :meta_keywords do
+      label "SEO Keywords"
+    end
+    
+    field :meta_description do
+      label "SEO Description"
+    end
+    
     field :is_published
     field :show_in_menu
     
@@ -193,12 +209,6 @@ RailsAdmin.config do |config|
 
     field :content, :ck_editor 
     field :banners
-    
-    field :parent_id, :enum do
-      enum_method do
-        :parent_enum
-      end
-    end
     
     nestable_list true
     nestable_tree({
