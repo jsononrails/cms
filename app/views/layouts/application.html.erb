@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta content="<%= @page.meta_description %>" name="description">
-	<meta content="<%= @page.meta_keywords %>" name="keywords">
+	<meta content="<%= @page.meta_description unless @page.nil? %>" name="description">
+	<meta content="<%= @page.meta_keywords unless @page.nil? %>" name="keywords">
     <title><%= @site.name unless @site.nil? %><%= content_for?(:title) ? yield(:title) : "" %></title>
 
     <%= stylesheet_link_tag    "application" %>
@@ -154,7 +154,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-	  ga('create', '<%= @site.ga_code %>', 'auto');
+	  ga('create', '<%= @site.ga_code unless @site.nil? %>', 'auto');
 	  ga('send', 'pageview');
 
 	</script>
