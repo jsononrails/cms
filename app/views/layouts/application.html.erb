@@ -62,7 +62,7 @@ Note 2: 'Nb cols' parameter for Bootstrap only.
 		<%= content_for(:map) ? yield(:map) : "" %>	
 		<div class="large-12 columns banners">
 			<% if @page && @page.banners %>
-			  <% @page.banners.each do |banner| %>
+			  <% @page.banners.order(:id).each do |banner| %>
 			    <div class="hide banner">
 					<%= image_tag(banner.url_content, alt: banner.alttag, title: banner.alttag) %>
 					<% if banner.intro != "" %>

@@ -33,7 +33,7 @@ class Page < ActiveRecord::Base
   end
   
   def layout_enum
-    Layout.where.not(id: id).map { |l| [ l.layout, l.id ] }
+    Layout.all.map { |l| [ l.layout, l.id ] }
   end
   
   # set friendly url ability

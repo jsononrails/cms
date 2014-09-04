@@ -56,6 +56,7 @@ gem 'rails_admin_nestable'
 gem 'ancestry'
 gem 'ckeditor'
 gem 'carrierwave'
+gem 'fog'
 gem 'mini_magick'
 gem 'foundation-rails'
 gem 'rails_12factor', group: :production

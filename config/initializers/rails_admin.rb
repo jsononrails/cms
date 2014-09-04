@@ -163,9 +163,10 @@ RailsAdmin.config do |config|
     end
     
     #hide pages
-    configure :pages do
-      hide
-    end
+    #configure :pages do
+      #hide
+    #end
+    field :pages
     
   end
   
